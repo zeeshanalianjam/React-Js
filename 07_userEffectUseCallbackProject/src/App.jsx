@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect , useRef } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 // import './App.css'
 
 function App() {
@@ -36,11 +36,11 @@ function App() {
   const passwordCopytoClipboard = useCallback(() => {
     passwordRef.current?.select()
     window.navigator.clipboard.writeText(password)
-  } , [password])
+  }, [password])
 
   useEffect(() => {
     passwordGenrator()
-  } , [length , numberAllowed , charAllowed , passwordGenrator])
+  }, [length, numberAllowed, charAllowed, passwordGenrator])
   return (
     <>
       {/* main div containr */}
