@@ -11,7 +11,7 @@ function Button({
 }){
 
     return (
-        <button>
+        <button className={`px-4 px-2 rounded-lg ${bgColor} ${textColor} ${className} `}>
             {children}
         </button>
     )
