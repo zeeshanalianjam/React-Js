@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Login as authLogin } from '../store/authSlice'
+import { login as authLogin } from '../store/authSlice'
 import { Button, Input, Logo } from './index'
 import { useDispatch } from 'react-redux'
 import authServices from '../appwrite/auth'
@@ -56,7 +56,7 @@ function Login() {
         {/* second div --> error */}
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
         {/* second div --> form */}
-        <form c onSubmit={handleSubmit(login)} className="mt-8">
+        <form onSubmit={handleSubmit(login)} className="mt-8">
           {/* form data */}
           <div className='space-y-5'>
             {/* Input grap from components and this input type email */}

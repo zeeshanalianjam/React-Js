@@ -22,11 +22,11 @@ export class AuthServices {
                 // Call another method
                 return this.login({ email, password })
             } else {
-                return userAccount
+                return userAccount;
             }
-
+            
         } catch (error) {
-            throw error;
+            console.log("Appwrite serive :: creatAccount :: error", error);
         }
     }
 
@@ -34,7 +34,7 @@ export class AuthServices {
         try {
             return await this.account.createEmailPasswordSession(email, password)
         } catch (error) {
-            throw error;
+            console.log("Appwrite serive :: login :: error", error);
         }
     }
 
@@ -42,7 +42,7 @@ export class AuthServices {
         try {
             await this.account.get();
         } catch (error) {
-            throw error
+            // throw error
         }
         return null;
     }
@@ -51,7 +51,7 @@ export class AuthServices {
         try {
             await this.account.deleteSessions();
         } catch (error) {
-            throw error
+            console.log("Appwrite serive :: getCurrentUser :: error", error);
         }
     }
 
